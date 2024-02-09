@@ -141,6 +141,7 @@
 
     <!-- Page Title -->
     <title>Dashboard | @yield('title')</title>
+    @section('title', 'Page Title')
 </head>
 <!-- MAIN CONTENT -->
 
@@ -250,7 +251,7 @@
 
                         <!-- Link -->
                         <small class="mb-0 text-muted">
-                            Already registered? <a href="sign-in-illustration.html">Login</a>
+                            Already registered? <a href="{{ route('login') }}">Login</a>
                         </small>
                     </div>
                 </form>

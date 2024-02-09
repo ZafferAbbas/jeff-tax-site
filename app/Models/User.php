@@ -22,7 +22,6 @@ class User extends Authenticatable implements MustVerifyEmail
     protected $fillable = [
         'name',
         'email',
-        'phone',
         'password',
     ];
 
@@ -49,4 +48,12 @@ class User extends Authenticatable implements MustVerifyEmail
     {
         return $this->belongsToMany(Role::class);
     }
+    /**
+    * Get the client details associated with the user.
+    */
+    public function clientDetails()
+    {
+        return $this->hasOne(ClientDetails::class);
+    }
+
 }
